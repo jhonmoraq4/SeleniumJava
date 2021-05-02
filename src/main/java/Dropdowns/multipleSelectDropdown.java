@@ -1,7 +1,7 @@
 package Dropdowns;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
@@ -12,27 +12,20 @@ public class multipleSelectDropdown {
 
         System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\drivers\\chromedriver.exe");
 
-        //Instance of webdriver
         WebDriver driver = new ChromeDriver();
 
-        //Enter to a website
         driver.get(url);
-
-        //Maximize
         driver.manage().window().maximize();
 
-        //Declare the Select Object
+        //Declare the object of UI Select
 
-        Select standardMultiSelect = new Select(driver.findElement(By.id("cars")));
+        Select cars = new Select(driver.findElement(By.id("cars")));
 
-        //Now we can select items depending on your needs
-        standardMultiSelect.selectByIndex(3);
-        standardMultiSelect.selectByValue("saab");
-//        standardMultiSelect.deselectAll();
-        standardMultiSelect.deselectByIndex(3);
-        standardMultiSelect.deselectByValue("saab");
+        cars.selectByValue("audi");
+        cars.selectByVisibleText("Volvo");
+        cars.selectByIndex(2);
 
-
+        cars.deselectByValue("audi");
 
 
 
