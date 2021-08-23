@@ -1,7 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-
-<suite thread-count="2" verbose="1" name="Test Suite" parallel="tests">
-
+<suite name="Test Suite" verbose="5" thread-count="1" parallel="tests">
     <test name="RadioButtonYes">
         <groups>
             <run>
@@ -10,18 +8,19 @@
         </groups>
 
         <classes>
-            <class name="Tests.TestNG.SuiteSample.RadioButtonYes"/>
+            <class name="Tests.TestNG.SuiteSample.RadioButtonYes"></class>
         </classes>
     </test>
-
     <test name="RadioButtonImpressive">
         <groups>
             <run>
-                <include name="URL"/>
+                <include name="TITLE"/>
             </run>
         </groups>
+
         <classes>
-            <class name="Tests.TestNG.SuiteSample.RadioButtonImpressive"/>
+            <class name="Tests.TestNG.SuiteSample.RadioButtonImpressive"></class>
         </classes>
     </test>
+
 </suite>

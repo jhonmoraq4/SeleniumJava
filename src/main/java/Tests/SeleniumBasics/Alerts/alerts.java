@@ -42,7 +42,7 @@ public class alerts {
         Thread.sleep(2000);
         buttons.get(3).click();
         Thread.sleep(2000);
-        driver.switchTo().alert().sendKeys("JoanMedia Test");
+        driver.switchTo().alert().sendKeys("JoanMedia TestWDManager");
         driver.switchTo().alert().accept();
         Thread.sleep(2000);
 

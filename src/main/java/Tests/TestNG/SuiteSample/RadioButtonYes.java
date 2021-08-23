@@ -23,31 +23,26 @@ public class RadioButtonYes {
         driver.get(url);
     }
 
-    @Test(groups = {"URL"})
-    public void verifyUrl(){
+    @Test(groups = {"TITLE"})
+    public void validateTitle(){
         String expectedTitle = "ToolsQA";
         String actualTitle = driver.getTitle();
 
-        Assert.assertEquals(actualTitle,expectedTitle);
+        Assert.assertEquals(actualTitle, expectedTitle);
     }
 
     @Test(groups = {"CLICK"})
-    public void clickYes(){
-
-//        driver.findElement(By.id("yesRadio")).click();
+    public void clickImpressive(){
         WebElement element = driver.findElement(By.id("yesRadio"));
+
         JavascriptExecutor executor = (JavascriptExecutor)driver;
-        executor.executeScript("arguments[0].click();", element);
+        executor.executeScript("arguments[0].click()", element);
 
         String response = driver.findElement(By.className("text-success")).getText();
-        System.out.println("The response was: " + response);
 
         Assert.assertEquals(response, "Yes");
 
     }
-
-
-
 
 
     @AfterMethod(alwaysRun = true)
